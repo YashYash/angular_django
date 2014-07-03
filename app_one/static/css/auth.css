@@ -1,0 +1,19 @@
+#banner{
+    height:500px;
+    width:100%;
+    background-image:url("https://s3.amazonaws.com/uploads.hipchat.com/27243/386904/TN7CNrFLO6hHVSG/banner1.jpg");
+    background-size:cover;
+    background-position: center;
+    position:relative;
+    z-index:5;
+}
+
+#overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(1,1,1,0.4);
+    height:500px;
+    z-index:10;
+    width:100;
+}

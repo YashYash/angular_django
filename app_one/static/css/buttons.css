@@ -21,7 +21,7 @@ li{
     text-align:center
 }
 
-button{
+ul > li > button{
     text-align:center;
     outline:0;
     width:100%;
@@ -32,9 +32,6 @@ button{
     border: 0px solid black;
 }
 
-button:active{
-
-}
 .blue{
     background-color:blue;
 }
