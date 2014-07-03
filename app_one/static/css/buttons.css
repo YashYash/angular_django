@@ -20,7 +20,7 @@ li{
     text-align:center
 }
 
-button{
+ul > li > button{
     text-align:center;
     outline:0;
     width:100%;
@@ -31,9 +31,6 @@ button{
     cursor:pointer;
 }
 
-button:active{
-
-}
 .blue{
     background-color:blue;
 }
