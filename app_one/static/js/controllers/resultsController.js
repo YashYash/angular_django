@@ -1,7 +1,7 @@
 /**
  * Created by yash on 7/2/2014.
  */
-function buttonsController($scope, $http, $routeParams, $firebase, $location) {
+function buttonsController($scope, $http, $routeParams, $firebase) {
     var ref = new Firebase("https://buttonclicker.firebaseio.com/click-count");
     console.log("controller working");
     ref.once('value', function(dataSnapshot) {
@@ -15,6 +15,6 @@ function buttonsController($scope, $http, $routeParams, $firebase, $location) {
            $scope.data[color] = 1;
         }
         ref.set($scope.data);
-        window.location('/results');
+        console.log($scope.data[color]);
     }
 }

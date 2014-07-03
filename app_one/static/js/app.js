@@ -1,4 +1,4 @@
-var buttons_app = angular.module('buttons_app', ['ngRoute']);
+var buttons_app = angular.module('buttons_app', ['ngRoute','firebase']);
 
 buttons_app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
@@ -6,8 +6,10 @@ buttons_app.config(['$routeProvider', function ($routeProvider) {
         controller: 'buttonsController'
     });
 
-    $routeProvider.otherwise({redirectTo: '/'})
-
+    $routeProvider.when('/results', {
+        templateUrl: 'static/views/results.html',
+        controller: 'resultsController'
+    });
 
 }]);
 
