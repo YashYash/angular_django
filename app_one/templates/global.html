@@ -1,0 +1,44 @@
+{% load i18n %}
+{% load static %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static "css/global.css" %}">
+    {% block css %}{% endblock %}
+{#    <script type="text/javascript" src="{% static "jquery/jquery.min.js" %}"></script>#}
+{#    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>#}
+
+    <!--angular javascript stuff-->
+    <script src="{% get_static_prefix %}js/vendor/angular.js"></script>
+    <script src="{% get_static_prefix %}js/vendor/angular-route.js"></script>
+    <script src="{% get_static_prefix %}js/vendor/angular-resource.js"></script>
+
+    <!--angular app.js-->
+    <script src="{% get_static_prefix %}js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="{% get_static_prefix %}js/controllers/buttonsController.js"></script>
+    <script src="{% get_static_prefix %}js/controllers/buttonstwoController.js"></script>
+</head>
+
+<body>
+    <ul id="nav">
+        {% block nav-list-items %}{% endblock %}
+    </ul>
+
+{% block content %}
+    <div>
+        <div ng-app="buttons_app">
+            <h1>First app</h1>
+            <div ng-view ng-controller="buttonsController"></div>
+        </div>
+
+    </div>
+{% endblock %}
+
+</body>
+
+</html>

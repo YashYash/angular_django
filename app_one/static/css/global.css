@@ -1,0 +1,161 @@
+body{
+    margin:0;
+}
+h1,h2,h3,h4,h5,h6,p,input,button,textarea,ul,li,a{
+    font-family: "Open Sans", sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+.light{
+    font-weight:100;
+}
+.semi-bold{
+    font-weight:400;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.xs-small-font{
+    font-size:10px;
+}
+
+.small-font{
+    font-size:16px;
+}
+
+.medium-font{
+    font-size: 25px;
+}
+
+.large-font{
+    font-size: 35px;
+}
+
+.xl-font{
+    font-size:45px;
+}
+
+.xxl-font{
+    font-size:55px;
+}
+.content{
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-size:cover;
+}
+
+.background-one{
+    background-image: url("https://s3.amazonaws.com/uploads.hipchat.com/27243/386904/Ghq8bHXR1PAhzCS/back2.jpg");
+}
+
+.blue{
+    color:#22c1ee; !important
+}
+
+.white{
+    color:white; !important
+}
+
+.grey-input{
+  border: 1px solid #e4e4e4;
+  background-color: #e4e4e4;
+  color: #504f56;
+  display: block;
+  margin-bottom: 10px;
+  outline: 0;
+  font-size: 14px;
+  border-radius: 2px;
+  transition: 0.2s ease;
+  padding-left: 10px;
+}
+
+.grey-input:focus{
+    background-color: white;
+    border: 1px solid #22c1ee;
+}
+
+button.clear, input.clear{
+    outline:0;
+    border:1px solid #22c1ee;
+    background:none;
+    font-family: "Open Sans",sans-serif;
+    transition:0.3s ease;
+    color:#22c1ee;
+    cursor:pointer;
+}
+
+button.clear:hover{
+    background-color: rgba(34,193,238,0.1);
+    transition:0.3s ease;
+}
+
+input.clear:hover{
+    background-color: rgba(34,193,238,0.1);
+    transition:0.3s ease;
+}
+
+
+/* the global-nav */
+
+#nav{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-end;
+    -webkit-flex-wrap: wrap;
+    -moz-justify-content: flex-end;
+    -moz-flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color 500ms;
+    z-index: 1000;
+    list-style: none;
+    background-color: rgba(238,238,238,0.7);
+}
+
+.left-element{
+    margin-right:auto;
+}
+#nav > li {
+    padding: 10px 20px 10px 20px;
+    transition:0.3s ease;
+    cursor:pointer;
+}
+#nav > li > a:hover{
+    color: #22c1ee;
+    transition:0.3s ease;
+}
+
+.icon-hamburger{
+    display: none;
+    position: relative;
+    top: 16px;
+    right: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-color: #e4e4e4;
+    height: 24px;
+    width: 45px;
+    padding: 5px 0 5px 0;
+    color: grey;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.icon-hamburger:hover{
+    border-bottom: none;
+    color: black;
+    transition: 0.2s ease;
+}
