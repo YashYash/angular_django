@@ -3,11 +3,13 @@
  */
 function buttonsController($scope, $http, $routeParams, $firebase, $location) {
     var ref = new Firebase("https://buttonclicker.firebaseio.com/click-count");
-    console.log("controller working");
     ref.once('value', function(dataSnapshot) {
         refSnapshot = dataSnapshot;
         $scope.data = refSnapshot.val();
     });
+    if (!$scope.data) {
+        $scope.data = {};
+    }
     $scope.click_function = function(color){
         if ($scope.data[color]) {
             $scope.data[color]++;
@@ -15,6 +17,6 @@ function buttonsController($scope, $http, $routeParams, $firebase, $location) {
            $scope.data[color] = 1;
         }
         ref.set($scope.data);
-        window.location('/results');
+        $location.path('/results');
     }
 }
